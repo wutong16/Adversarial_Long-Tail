@@ -168,7 +168,7 @@ python test.py checkpoints/<folder-name-of-the-pretrained-model>/eval.yaml -a AL
 ## License and Citation
 If you find our code or paper useful, please cite our paper:
 ```bibtex
-@inproceedings{wu2020advlt,
+@inproceedings{wu2021advlt,
  author =  {Tong Wu, Ziwei Liu, Qingqiu Huang, Yu Wang, and Dahua Lin},
  title = {Adversarial Robustness under Long-Tailed Distribution},
  booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
