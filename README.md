@@ -9,9 +9,9 @@ This repository contains the PyTorch implementation of the [paper]():
 <img src='./assets/github_teaser_2.png' width=800>
 
 > Real-world data usually exhibits a long-tailed distribution, while previous works on adversarial robustness mainly focus on balanced datasets.
-To push adversarial robustness towards more realistic scenarios, in this work we investigate the adversarial vulnerability as well as defense under long-tailed distributions.
+To push adversarial robustness towards more realistic scenarios, in this work, we investigate the adversarial vulnerability as well as defense under long-tailed distributions.
 We perform a systematic study on existing Long-Tailed recognition (LT) methods in conjunction with the Adversarial Training framework (AT) and obtain several valuable observations.
-We then propose a clean yet effective framework, RoBal, which consists of two dedicated modules, a scale-invariant classifier and data re-balancing via both margin engineering at training stage and boundary adjustment during inference.
+We then propose a clean yet effective framework, RoBal, which consists of two dedicated modules, a scale-invariant classifier and data re-balancing via both margin engineering at the training stage and boundary adjustment during inference.
 
 This repository includes:
 - Code for the LT methods applied with AT framework in our study.
@@ -149,12 +149,12 @@ python train.py configs/CIFAR100_LT/cifar100_LT0.1_pgdat_robal_R_train.yaml
 Evaluate the models by running:
 ```
 # CIFAR-10-LT
-python test.py configs/CIFAR10_LT/cifar10_LT0.02_pgdat_robal_N_eval.yaml
-python test.py configs/CIFAR10_LT/cifar10_LT0.02_pgdat_robal_R_eval.yaml
+python test.py configs/CIFAR10_LT/cifar10_LT0.02_pgdat_robal_N_eval.yaml -a ALL
+python test.py configs/CIFAR10_LT/cifar10_LT0.02_pgdat_robal_R_eval.yaml -a ALL
 
 # CIFAR-100-LT
-python test.py configs/CIFAR100_LT/cifar100_LT0.1_pgdat_robal_N_eval.yaml
-python test.py configs/CIFAR100_LT/cifar100_LT0.1_pgdat_robal_R_eval.yaml
+python test.py configs/CIFAR100_LT/cifar100_LT0.1_pgdat_robal_N_eval.yaml -a ALL
+python test.py configs/CIFAR100_LT/cifar100_LT0.1_pgdat_robal_R_eval.yaml -a ALL
 ```
 
 #### Pre-trained models
