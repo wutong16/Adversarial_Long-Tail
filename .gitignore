@@ -127,7 +127,6 @@ data
 *.jpg
 *.png
 *.xlsx
-configs/*
 z_deprecated/*
 *checkpoints/*
 tmp/*

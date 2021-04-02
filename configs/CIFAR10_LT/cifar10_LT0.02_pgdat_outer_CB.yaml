@@ -1,0 +1,49 @@
+# optimizer
+epochs: 80
+batch_size: 64
+test_batch_size: 64
+weight_decay: 0.0002
+lr: 0.1
+momentum: 0.9
+lr_decline:
+  - 60
+  - 75
+# pgd
+train_num_steps: 5
+train_step_size: 0.0078
+train_epsilon: 0.031
+test_num_steps: 20
+test_step_size: 0.0078
+test_epsilon: 0.031
+random: True
+
+
+# log and save model
+log_interval: 100
+save_freq: 10
+log_level: 'INFO'
+
+# dataset
+imbalance_ratio: 0.02
+dataset: CIFAR10
+num_classes: 10
+
+# train paths
+train_mode: pgd_at
+loss_opt:
+  CB:
+    beta: 0.9999
+    loss_type: focal
+    gamma: 2.0
+
+sampler: ~
+backbone: WideResNet
+classifier: FC
+
+model_dir: checkpoints/cifar10-0.02-pgd-5-outer-CB/
+resume_epoch: 0
+
+# test
+model_path: checkpoints/cifar10-0.02-pgd-5-outer-CB/epoch80.pt
+
+

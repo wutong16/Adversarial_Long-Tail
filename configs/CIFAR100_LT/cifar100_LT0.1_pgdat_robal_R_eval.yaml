@@ -1,0 +1,49 @@
+# optimizer
+epochs: 80
+batch_size: 64
+test_batch_size: 64
+weight_decay: 0.0002
+lr: 0.1
+momentum: 0.9
+lr_decline:
+  - 60
+  - 75
+
+# pgd
+train_num_steps: 5
+train_step_size: 0.0078
+train_epsilon: 0.031
+test_num_steps: 20
+test_step_size: 0.0078
+test_epsilon: 0.031
+random: True
+
+
+# log and save model
+log_interval: 100
+save_freq: 10
+
+# dataset
+imbalance_ratio: 0.1
+dataset: CIFAR100
+num_classes: 100
+
+# train paths
+train_mode: pgd_at
+loss_opt: ~
+sampler: ~
+backbone: WideResNet
+classifier: PostProc
+classifier_opt:
+  posthoc: True
+  classifier: Cos
+  bias: False
+  tau_p: 1.7
+  scale: 10
+  gamma: 0.0625
+
+model_dir: ./checkpoints/cifar100-0.1-pgd-5-cos-s10m0.3-tau_m0b0/
+resume_epoch: 0
+remark: tau1.7
+# test
+model_path: ./checkpoints/cifar100-0.1-pgd-5-cos-s10m0.3-tau_m0b0/epoch80.pt

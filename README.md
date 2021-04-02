@@ -43,9 +43,8 @@ Here `-a ALL` denotes that we evaluate five attacks including FGSM, PGD, MIM, CW
 
 ### Long-tailed recognition methods with adversarial training framework
 
-We provide scripts 
-We mainly provide 
-For CIFAR-100-LT, simply set `imbalance_ratio=0.1`, `dataset=CIFAR100`, and `num_classes=100` in the config file, and don't forget to change the `model_dir` (working directory to save the log files and checkpoints) and `model_path` (checkpoint to evaluate by `test.py`).
+We provide scripts for the long-tailed recognition methods applied with adversarial training framework as reported in our study.
+We mainly provide config files for CIFAR-10-LT. For CIFAR-100-LT, simply set `imbalance_ratio=0.1`, `dataset=CIFAR100`, and `num_classes=100` in the config file, and don't forget to change the `model_dir` (working directory to save the log files and checkpoints) and `model_path` (checkpoint to evaluate by `test.py`).
 
 #### Methods applied at training time.
 > Methods applied at training stage include class-aware re-sampling and different kinds of cost-sensitive learning. 
@@ -120,7 +119,7 @@ python test.py configs/CIFAR10_LT/cifar10_LT0.02_pgdat_post_norm.yaml -a ALL
 # Class-aware bias
 python test.py configs/CIFAR10_LT/cifar10_LT0.02_pgdat_post_logitadjust.yaml -a ALL
 ```
-Sometimes a baseline model is not applicable, since a cosine classifier is used with some statistics recorded during training. E.g., to apply the method below, train the model by:
+Sometimes a baseline model is not applicable, since a cosine classifier is used with some statistics recorded during training. For example, to apply the method below, train the model by:
 ```
 # Feature disentangling
 python train.py configs/CIFAR10_LT/cifar10_LT0.02_pgdat_TDESim.yaml 
@@ -159,8 +158,8 @@ python test.py configs/CIFAR100_LT/cifar100_LT0.1_pgdat_robal_R_eval.yaml
 ```
 
 #### Pre-trained models
-We provide the [pre-trained models]((https://drive.google.com/drive/folders/1gOsY10_FbTSfwc3xa_utnSL00OCcJb7Q?usp=sharing)) for our methods above.
-Download and extract them to the `./checkpoints` directory, and produce the results with `eval.yaml` in the corresponding folder by running:
+We provide the [pre-trained models](https://drive.google.com/drive/folders/1gOsY10_FbTSfwc3xa_utnSL00OCcJb7Q?usp=sharing) for our methods above.
+Download and extract them to the `./checkpoints` directory, and produce the results with `eval.yaml` in the corresponding folders by running:
 ```
 python test.py checkpoints/<folder-name-of-the-pretrained-model>/eval.yaml -a ALL
 ```
@@ -173,7 +172,8 @@ If you find our code or paper useful, please cite our paper:
  author =  {Tong Wu, Ziwei Liu, Qingqiu Huang, Yu Wang, and Dahua Lin},
  title = {Adversarial Robustness under Long-Tailed Distribution},
  booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
- year = {2021}}
+ year = {2021}
+ }
 ```
 ## Acknowledgement
 We thank the authors for the following repositories for code reference:
@@ -188,5 +188,5 @@ We thank the authors for the following repositories for code reference:
 [mma_training](https://github.com/BorealisAI/mma_training), 
 [TDE](https://github.com/KaihuaTang/Long-Tailed-Recognition.pytorch), etc.
 
-
+## Contact
 Please contact [@wutong16](https://github.com/wutong16) for questions, comments and reporting bugs.
