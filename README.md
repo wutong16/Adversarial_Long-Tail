@@ -25,7 +25,7 @@ This repository includes:
 * Other dependencies partially listed in `requirements.txt` 
 
 ## Datasets
-We use the imbalanced CIFAR-10 and CIFAR-100 datasets. The data will be automatically downloaded and converted.
+We use the CIFAR-10-LT and CIFAR-100-LT datasets. The data will be automatically downloaded and converted.
 
 ## Usage
 ### Baseline
