@@ -1,6 +1,6 @@
 # Adversarial Long-Tail
 
-This repository contains the PyTorch implementation of the [paper](): 
+This repository contains the PyTorch implementation of the [paper](https://arxiv.org/abs/2104.02703): 
 
 *Adversarial Robustness under Long-Tailed Distribution, CVPR 2021 **(Oral)***
  
