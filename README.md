@@ -6,7 +6,7 @@ This repository contains the PyTorch implementation of the [paper](https://arxiv
  
 [Tong Wu](https://github.com/wutong16), [Ziwei Liu](https://liuziwei7.github.io/), [Qingqiu Huang](http://qqhuang.cn/), [Yu Wang](http://nicsefc.ee.tsinghua.edu.cn/people/yu-wang/), [Dahua Lin](http://dahua.me/)
 
-<img src='./assets/github_teaser_2.png' width=800>
+<img src='./assets/github_teaser.png' width=800>
 
 > Real-world data usually exhibits a long-tailed distribution, while previous works on adversarial robustness mainly focus on balanced datasets.
 To push adversarial robustness towards more realistic scenarios, in this work, we investigate the adversarial vulnerability as well as defense under long-tailed distributions.
